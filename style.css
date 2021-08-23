@@ -1,0 +1,112 @@
+body{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+table {
+    position: absolute;
+    top:150px;
+    left: 350px;
+    height: 51vh;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+    border-width:1;
+    border-color: #94885a;
+    border-style: solid;
+    background: #99bf73;
+
+}
+th, td:first-child {
+    background: #4a5762;
+    color: #40be89;
+    padding: 10px 20px;
+}
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: #ecca9a;
+}
+td {
+    background: #D8E6F3;
+}
+th:first-child, td:first-child {
+    text-align: left;
+}
+.ff{
+    position: absolute;
+    top:90px;
+    left: 580px;
+}
+.ship {
+    background: #00810b;
+}
+
+.miss {
+    background:#c6dff7;
+}
+
+.hit {
+    background: #ff2727;
+}
+
+.game {
+
+    left:120px;
+    display: table;
+    border-spacing: 7px 7px;
+}
+
+.cell {
+
+
+    top:50%;
+    left:50%;
+    display: table-cell;
+
+}
+.kill1 {
+    background: #481779;
+}
+.kill2 {
+    background: #135ea0;
+}
+.hit {
+    background: #ff2727;
+}
+.hit1 {
+    background: #2f8040;
+}
+
+.right_panel {
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    border-width:1;
+    border-color: #80b580;
+    border-style: solid; background: #D8E6F3;
+    text-align: center;
+    height: 27vh;
+    width: 160px;
+}
+
+.confirmbt {
+    margin-bottom: 7px;
+    background: #b1ba30;
+    width: 50%;
+    height: 10%;
+}
+
+.confirmbt:hover{
+    margin-bottom: 7px;
+    background: #582475;
+    width: 50%;
+    height: 10%;
+}
+
+.confirmbt:active{
+    margin-bottom: 7px;
+    background: #1b400e;
+    width: 50%;
+    height: 10%;
+}

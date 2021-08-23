@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>Вирусы</title>
+</head>
+<body>
+<div class='game'>
+    <div class='cell'>
+        <h3 align="center" class="ff">Game field</h3>
+        <table align="center" id='own_field'>
+            <tr><th>*</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td id='1' class='none'></td>
+                <td id='2' class='none'></td>
+                <td id='3' class='none'></td>
+                <td id='4' class='none'></td>
+                <td id='5' class='none'></td>
+                <td id='6' class='none'></td>
+                <td id='7' class='none'></td>
+                <td id='8' class='none'></td>
+                <td id='9' class='none'></td>
+                <td id='10' class='none'></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td id='11' class='none'></td>
+                <td id='12' class='none'></td>
+                <td id='13' class='none'></td>
+                <td id='14' class='none'></td>
+                <td id='15' class='none'></td>
+                <td id='16' class='none'></td>
+                <td id='17' class='none'></td>
+                <td id='18' class='none'></td>
+                <td id='19' class='none'></td>
+                <td id='20' class='none'></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td id='21' class='none'></td>
+                <td id='22' class='none'></td>
+                <td id='23' class='none'></td>
+                <td id='24' class='none'></td>
+                <td id='25' class='none'></td>
+                <td id='26' class='none'></td>
+                <td id='27' class='none'></td>
+                <td id='28' class='none'></td>
+                <td id='29' class='none'></td>
+                <td id='30' class='none'></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td id='31' class='none'></td>
+                <td id='32' class='none'></td>
+                <td id='33' class='none'></td>
+                <td id='34' class='none'></td>
+                <td id='35' class='none'></td>
+                <td id='36' class='none'></td>
+                <td id='37' class='none'></td>
+                <td id='38' class='none'></td>
+                <td id='39' class='none'></td>
+                <td id='40' class='none'></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td id='41' class='none'></td>
+                <td id='42' class='none'></td>
+                <td id='43' class='none'></td>
+                <td id='44' class='none'></td>
+                <td id='45' class='none'></td>
+                <td id='46' class='none'></td>
+                <td id='47' class='none'></td>
+                <td id='48' class='none'></td>
+                <td id='49' class='none'></td>
+                <td id='50' class='none'></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td id='51' class='none'></td>
+                <td id='52' class='none'></td>
+                <td id='53' class='none'></td>
+                <td id='54' class='none'></td>
+                <td id='55' class='none'></td>
+                <td id='56' class='none'></td>
+                <td id='57' class='none'></td>
+                <td id='58' class='none'></td>
+                <td id='59' class='none'></td>
+                <td id='60' class='none'></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td id='61' class='none'></td>
+                <td id='62' class='none'></td>
+                <td id='63' class='none'></td>
+                <td id='64' class='none'></td>
+                <td id='65' class='none'></td>
+                <td id='66' class='none'></td>
+                <td id='67' class='none'></td>
+                <td id='68' class='none'></td>
+                <td id='69' class='none'></td>
+                <td id='70' class='none'></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td id='71' class='none'></td>
+                <td id='72' class='none'></td>
+                <td id='73' class='none'></td>
+                <td id='74' class='none'></td>
+                <td id='75' class='none'></td>
+                <td id='76' class='none'></td>
+                <td id='77' class='none'></td>
+                <td id='78' class='none'></td>
+                <td id='79' class='none'></td>
+                <td id='80' class='none'></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td id='81' class='none'></td>
+                <td id='82' class='none'></td>
+                <td id='83' class='none'></td>
+                <td id='84' class='none'></td>
+                <td id='85' class='none'></td>
+                <td id='86' class='none'></td>
+                <td id='87' class='none'></td>
+                <td id='88' class='none'></td>
+                <td id='89' class='none'></td>
+                <td id='90' class='none'></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td id='91' class='none'></td>
+                <td id='92' class='none'></td>
+                <td id='93' class='none'></td>
+                <td id='94' class='none'></td>
+                <td id='95' class='none'></td>
+                <td id='96' class='none'></td>
+                <td id='97' class='none'></td>
+                <td id='98' class='none'></td>
+                <td id='99' class='none'></td>
+                <td id='100' class='none'></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+    <div>
+
+        <div class = 'right_panel'>
+            <p id='yourname'>Ваше имя:</p>
+            <button type="button" onclick=confirm_place() id='confirmbt' class='confirmbt'>Start</button>
+            <br>
+            <br>
+            <a href='data.json', target='_blank'>History</a>
+            <p id='step'></p>
+        </div>
+    </div>
+</div>
+<script src='virus.js'></script>
+</body>
+</html>
